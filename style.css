@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+div.main-container {
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  height: 100vh;
+}
+
+.record-input,
+.record-display {
+  border-radius: 1rem;
+  padding: 2em 0;
+  margin: 3rem 0;
+  box-shadow: 0 0 6px 0 rgba(8, 0, 8, 1);
+}
+
+h2 {
+  padding: 1em 0;
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.record-input {
+  color: #000;
+  background-color: #f0f0f0;
+}
+
+.record-display {
+  color: #ffff;
+  background-color: #e52165;
+  position: relative;
+}
+
+.entry-form {
+  padding: 1em 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: 500;
+  opacity: 0.7;
+  font-size: 1.8rem;
+}
+
+label,
+input {
+  display: block;
+  outline: none;
+  border: none;
+  border-radius: 2.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  color: #000;
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1em 1.8em;
+  margin: 1.2rem 0;
+  transition: all 0.5s ease;
+}
+
+input:focus {
+  background-color: #252525;
+  color: #fff;
+}
+
+.message {
+  text-align: center;
+  display: block;
+  width: 50%;
+  font-size: 1.8rem;
+  margin: 1.8rem auto;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #000;
+  padding: 0.7em 0;
+  visibility: hidden;
+}
+
+/* Alert Types */
+
+.error {
+  padding: 1em;
+  background-color: #f32013;
+  visibility: visible;
+}
+
+.success {
+  background-color: #4bb543;
+  visibility: visible !important;
+}
+
+/* **************************************************** */
+
+.input-btns {
+  text-align: center;
+}
+
+/* Utility Button Styling */
+button {
+  display: block;
+  width: 16rem;
+  margin: 2rem auto;
+  font-size: 1.55rem;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 1em;
+  border-radius: 2.5em;
+  border: 3px solid white;
+  background-color: #000;
+  color: white;
+  transition: all 0.5 ease;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+#submit-btn span,
+#cancel-btn span {
+  padding-right: 0.4em;
+}
+
+#reset-btn {
+  position: absolute;
+  right: 2.5rem;
+  top: 1rem;
+}
+
+.record-display {
+  padding: 3em 4em;
+}
+
+.record-el {
+  display: block;
+  padding: 0.4em 0;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.record-el span:nth-child(2) {
+  font-size: 1.8rem;
+}
+
+#labelling {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.record-item {
+  color: #000;
+  border-radius: 1em;
+  padding: 1em 2.5em;
+  margin: 1.5rem 0;
+  background-color: #fff;
+  box-shadow: 0 0 6px #777;
+}
+
+#delete-btn span {
+  padding: 0.5em;
+}
+
+/********************* Media Queries ***********************/
+
+@media screen and (min-width: 1198px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 90vw;
+    column-gap: 30px;
+  }
+
+  .record-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
